@@ -263,45 +263,49 @@ a:hover{
 .contact-info li a:hover{
   color: #0026ff;
 }
+#contact-form{
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
 
-.form-control {
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
-  -ms-box-shadow: none;
-  -o-box-shadow: none;
-  box-shadow: none;
-  border: none;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 18px;
-  font-weight: 300;
-  -webkit-border-radius: 0px;
-  -moz-border-radius: 0px;
-  -ms-border-radius: 0px;
+#contact .form-control {
+  background: transparent;
+  border: 1px solid rgb(189, 189, 189);
   border-radius: 0px;
-}
-.form-control:focus, .form-control:active {
   box-shadow: none;
-  border: 1px solid rgba(0, 0, 0, 0.8);
+  font-size: 16px;
+  margin-bottom: 16px;
+  transition: all 0.4s ease-in-out;
 }
 
-input[type="text"] {
+#contact .form-control:hover {
+  border-color: #f0f0f0;
+}
+
+#contact textarea {
+  min-height: 100px;
+}
+
+#contact input {
   height: 50px;
 }
-input[type="email"] {
-  height: 50px;
+
+#contact input[type="submit"] {
+  background: #39397c;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  transition: all 0.4s ease-in-out;
+  margin-top: 10px;
 }
 
-.form-group {
-  margin-bottom: 30px;
+#contact input[type="submit"]:hover {
+  background: #444;
 }
 
-.form-group .btn:hover{
-  color: #f0f0f0;
-}
-.form-message {
-  color: rgb(245, 176, 176);
-  font-size: smaller;
-  padding: 0%;
+.contact-submit {
+  width: 50%;
 }
 
 

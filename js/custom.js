@@ -81,68 +81,7 @@ $(document).ready(function () {
       $(this).closest(".list-menu").toggleClass("reveal-modal");
     });
 
-  /* Contact Form */
-  $("#contactForm")
-    .validator()
-    .on("submit", function (event) {
-      if (event.isDefaultPrevented()) {
-        // handle the invalid form...
-        cformError();
-        csubmitMSG(false, "Please fill all fields!");
-      } else {
-        // everything looks good!
-        event.preventDefault();
-        csubmitForm();
-      }
-    });
-    var form = document.getElementById("#contactForm");
-    
-    async function handleSubmit(event) {
-      event.preventDefault();
-      var status = document.getElementById("my-form-status");
-      var data = new FormData(event.target);
-      fetch(event.target.action, {
-        method: form.method,
-        body: data,
-        headers: {
-            'Accept': 'application/json'
-        }
-      }).then(response => {
-        status.innerHTML = "Thanks for your submission!";
-        form.reset()
-      }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
-      });
-    }
-    form.addEventListener("submit", handleSubmit)
 
-  function cformSuccess() {
-    $("#contactForm")[0].reset();
-    csubmitMSG(true, "Message Submitted!");
-    $("input").removeClass("notEmpty"); // resets the field label after submission
-    $("textarea").removeClass("notEmpty"); // resets the field label after submission
-  }
-
-  function cformError() {
-    $("#contactForm")
-      .removeClass()
-      .addClass("shake animated")
-      .one(
-        "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
-        function () {
-          $(this).removeClass();
-        }
-      );
-  }
-
-  function csubmitMSG(valid, msg) {
-    if (valid) {
-      var msgClasses = "h5 text-center fadeInUp animated";
-    } else {
-      var msgClasses = "h5 text-center fadeInUp animated";
-    }
-    $("#cmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-  }
 
   /* wow
   -------------------------------*/
