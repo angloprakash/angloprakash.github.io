@@ -96,13 +96,6 @@ $(document).ready(function () {
       }
     });
 
-  function csubmitForm() {
-    // initiate variables with form content
-    var name = $("#cname").val();
-    var email = $("#cemail").val();
-    var message = $("#cmessage").val();
-
-
 
   function cformSuccess() {
     $("#contactForm")[0].reset();
