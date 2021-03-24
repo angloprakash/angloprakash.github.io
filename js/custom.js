@@ -103,8 +103,8 @@ $(document).ready(function () {
     var message = $("#cmessage").val();
 
     $.ajax({
-      type: "POST",
-      url: "https://formspree.io/f/mzbypvkl",
+      method: "POST",
+      action: "https://formspree.io/f/mzbypvkl",
       data: "name=" + name + "&email=" + email + "&message=" + message,
       success: function (text) {
         if (text == "success") {
