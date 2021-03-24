@@ -102,20 +102,7 @@ $(document).ready(function () {
     var email = $("#cemail").val();
     var message = $("#cmessage").val();
 
-    $.ajax({
-      method: "POST",
-      action: "https://formspree.io/f/mzbypvkl",
-      data: "name=" + name + "&email=" + email + "&message=" + message,
-      success: function (text) {
-        if (text == "success") {
-          cformSuccess();
-        } else {
-          cformError();
-          csubmitMSG(false, text);
-        }
-      },
-    });
-  }
+
 
   function cformSuccess() {
     $("#contactForm")[0].reset();
